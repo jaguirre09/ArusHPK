@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8e492ae7-fb92-4191-b78d-0f63fb8b4a19" name="arus.macondo.page" url="http://arus.macondo.page">
+        <fileTransfer host="ftp.oneago.com" port="21" rootFolder="/subdomains/arus.macondo.page">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
