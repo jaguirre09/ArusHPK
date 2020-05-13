@@ -4,15 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/color_white"
+    tools:context="com.oneago."
+    tools:ignore="ContentDescription">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:id="@+id/ingress_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/color_blue"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/check_contacts"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="152dp"
+                android:layout_height="110dp"
+                android:background="@color/color_blue"
+                android:padding="22dp"
+                android:src="@drawable/ic_services_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/color_blue"
+                android:gravity="center"
+                android:text="@string/activity_services"
+                android:textColor="@color/color_white"
+                android:textSize="18dp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/check_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="50dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@+id/ingress_report"
+            app:layout_constraintRight_toLeftOf="@+id/contact_support"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="152dp"
+                android:layout_height="110dp"
+                android:background="@color/color_blue"
+                android:padding="10dp"
+                android:src="@drawable/ic_polls_white_24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/color_blue"
+                android:gravity="center"
+                android:text="@string/activity_polls"
+                android:textColor="@color/color_white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contact_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="150dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@+id/check_contacts"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="152dp"
+                android:layout_height="110dp"
+                android:background="@color/color_blue"
+                android:padding="10dp"
+                android:src="@drawable/ic_settings_white_24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/color_blue"
+                android:gravity="center"
+                android:text="@string/activity_config"
+                android:textColor="@color/color_white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

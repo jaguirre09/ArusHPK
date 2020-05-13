@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ArusApp</string>
+    <string name="activity_services">Gestiona tus servicios</string>
+    <string name="activity_polls">Encuestas</string>
+    <string name="activity_config">Configuraciones</string>
+    <string name="services_management">Gestiona tus servicios</string>
+    <string name="held_desk">Aquí podrás enviar tickets a la mesa de ayuda</string>
+    <string name="new_ticket">Nuevo Ticket</string>
+    <string name="name_description">Describe la falla o el requerimiento</string>
 </resources>
