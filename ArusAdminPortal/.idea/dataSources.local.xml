@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="adminoneago_arus@oneago.com" uuid="1c53b75d-275f-4fd1-9b0f-bf8e99ad450f">
-      <database-info product="MariaDB" version="10.2.31-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.6.0" dbms="MARIADB" exact-version="10.2.31" exact-driver-version="2.6">
+    <data-source name="adminoneago_arus@oneago.com" uuid="fe5adbe4-d360-409c-94b5-0d6d0994c4b0">
+      <database-info product="MySQL" version="5.5.5-10.2.31-MariaDB" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MARIADB" exact-version="10.2.31" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
@@ -11,7 +11,11 @@
       <user-name>adminoneago_lyj</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="adminoneago_arus" />
+            <name qname="information_schema" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>
