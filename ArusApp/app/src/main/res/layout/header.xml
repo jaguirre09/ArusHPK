@@ -3,21 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="140dp">
 
 
     <ImageView
         android:id="@+id/back_arrow"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="97dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="52dp"
+        android:src="@drawable/ic_services_white"
         android:tint="@color/color_blue"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_services_white"
-        tools:visibility="visible" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
 
@@ -37,11 +36,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
         android:text="@string/held_desk"
         android:textColor="@color/color_blue"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back_arrow"
-        tools:layout_editor_absoluteX="68dp"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -50,6 +50,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="70dp"
         android:background="@color/color_blue"
+        android:onClick="main_exit"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_close_black_24dp"
         tools:ignore="MissingConstraints,VectorDrawableCompat"
@@ -59,14 +60,12 @@
         android:id="@+id/imageButton4"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/color_blue"
-        android:layout_marginRight="70dp"
         android:layout_marginLeft="68dp"
-
+        android:layout_marginRight="70dp"
+        android:background="@color/color_blue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="114dp" />
-
-
+        tools:layout_editor_absoluteY="138dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

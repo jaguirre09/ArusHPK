@@ -24,6 +24,7 @@
             android:layout_marginStart="150dp"
             android:layout_marginTop="50dp"
             android:background="@color/color_blue"
+            android:onClick="main_service"
             android:orientation="vertical"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/check_contacts"
@@ -34,7 +35,9 @@
                 android:layout_height="110dp"
                 android:background="@color/color_blue"
                 android:padding="22dp"
-                android:src="@drawable/ic_services_white" />
+                android:src="@drawable/ic_services_white"
+               />
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -44,7 +47,7 @@
                 android:text="@string/activity_services"
                 android:textColor="@color/color_white"
                 android:textSize="18dp"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"/>
         </LinearLayout>
 
         <LinearLayout
@@ -54,6 +57,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="50dp"
+            android:onClick="main_inquiry"
             android:orientation="vertical"
             app:layout_constraintLeft_toRightOf="@+id/ingress_report"
             app:layout_constraintRight_toLeftOf="@+id/contact_support"
@@ -94,6 +98,7 @@
                 android:padding="10dp"
                 android:src="@drawable/ic_settings_white_24dp" />
 
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
@@ -103,6 +108,7 @@
                 android:textColor="@color/color_white"
                 android:textSize="18dp" />
         </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
