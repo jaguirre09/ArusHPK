@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="adminoneago_arus@oneago.com" uuid="fe5adbe4-d360-409c-94b5-0d6d0994c4b0">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://oneago.com:3306/adminoneago_arus</jdbc-url>
+    </data-source>
+  </component>
+</project>
