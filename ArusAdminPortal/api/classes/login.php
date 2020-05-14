@@ -1,5 +1,5 @@
 <?php
-require_once "objects/user.php";
+require_once "../objects/user.php";
 
 class login
 {
