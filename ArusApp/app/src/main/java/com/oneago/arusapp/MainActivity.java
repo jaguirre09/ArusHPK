@@ -26,4 +26,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(main_inquiry);
 
     }
+
+    public void main_session(View v) {
+
+        Intent main_session= new Intent(this, activity_sessions.class);
+        startActivity(main_session);
+
+    }
     }

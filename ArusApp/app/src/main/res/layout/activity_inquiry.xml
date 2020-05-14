@@ -3,13 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <include
         android:id="@+id/header"
         layout="@layout/heder" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -28,16 +26,15 @@
 
     <Button
         android:id="@+id/send"
-        android:layout_marginBottom="10dp"
         android:layout_width="290dp"
         android:layout_height="85dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/color_blue"
         android:text="@string/send_inquiry"
         android:textColor="@color/color_white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-
-
-        app:layout_constraintTop_toBottomOf="@+id/recycler" />
+        app:layout_constraintTop_toBottomOf="@+id/recycler"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
