@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".service_Management">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="66dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="26dp"
+            android:text="@string/new_ticket"
+            android:textColor="@color/color_blue"
+            android:textSize="22dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="68dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/color_blue"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:layout_margin="2px"
+                        android:background="@color/color_white"
+                        android:hint="@string/user_name"
+                        android:textSize="22dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="68dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/color_blue"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="phone"
+                        android:layout_margin="2px"
+                        android:layout_weight="1"
+                        android:background="@color/color_white"
+                        android:hint="@string/phone"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_white" />
+
+                    <EditText
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2px"
+                        android:layout_weight="1"
+                        android:background="@color/color_white"
+                        android:hint="@string/Ubication"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="68dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/color_blue"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2px"
+                        android:layout_weight="1"
+                        android:background="@color/color_white"
+                        android:hint="@string/name_description"
+                        android:textSize="22dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="68dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/color_blue"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2px"
+                        android:layout_weight="1"
+                        android:background="@color/color_white"
+                        android:hint="@string/select_printer"
+                        android:textSize="22dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_margin="-2dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_list_white_24dp">
+
+                    </ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="68dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/color_blue"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:layout_margin="2px"
+                        android:layout_weight="1"
+                        android:background="@color/color_white"
+                        android:hint="@string/Email"
+                        android:textSize="22dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="68dp"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="283dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_blue"
+                        android:text="@string/send_request"
+                        android:textColor="@color/color_white"
+                        android:textSize="22dp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
