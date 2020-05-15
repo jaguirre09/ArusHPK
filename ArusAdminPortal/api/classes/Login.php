@@ -25,7 +25,7 @@ class login
         $con = null;
         require_once "connection.php"; // include $con
         if (!$this->isUserExists($con)) {
-            return new user(0, "", false, 0, true, "Usuario no encontrado");
+            return new User(0, "", false, 0, true, "Usuario no encontrado");
         }
 
         $query = "SELECT ID, FULL_NAME, PIN, ENABLED_LOGIN FROM USERS WHERE PIN = ? AND USER_TYPE = ?";
@@ -39,9 +39,9 @@ class login
             mysqli_stmt_fetch($prepare);
             mysqli_stmt_close($prepare);
 
-            return new user($id, $name, $enabled, $userType);
+            return new User($id, $name, $enabled, $userType);
         } else {
-            return new user(0, "", false, 0, true, "Ocurrió un error al procesar la solicitud.");
+            return new User(0, "", false, 0, true, "Ocurrió un error al procesar la solicitud.");
         }
     }
 
