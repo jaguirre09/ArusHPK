@@ -92,11 +92,13 @@
             tools:ignore="MissingConstraints">
 
             <ImageView
+                android:id="@+id/settings"
                 android:layout_width="152dp"
                 android:layout_height="110dp"
                 android:background="@color/color_blue"
                 android:padding="10dp"
-                android:src="@drawable/ic_settings_white_24dp" />
+                android:src="@drawable/ic_settings_white_24dp"
+                android:tint="#FFFFFF"/>
 
 
             <TextView

@@ -17,4 +17,6 @@
     <string name="instruction_inquiry">Describa las instruciones de la encuesta</string>
     <string name="send_inquiry">Enviar encuesta</string>
     <string name="question_inquiry">pregunta en la encuesta</string>
+    <string name="functioning_application">Funcionamuiento de la Aplicacion</string>
+    <string name="url_support_questions">Funcionamuiento de la Aplicacion</string>
 </resources>

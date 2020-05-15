@@ -12,7 +12,7 @@
         android:layout_height="86dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/untitled"
+        android:src="@drawable/Untitled"
         android:tint="@color/color_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

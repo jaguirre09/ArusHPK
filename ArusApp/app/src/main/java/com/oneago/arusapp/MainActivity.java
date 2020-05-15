@@ -27,10 +27,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void main_session(View v) {
-
-        Intent main_session= new Intent(this, activity_sessions.class);
-        startActivity(main_session);
-
-    }
     }

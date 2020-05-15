@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-<Str
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <PreferenceCategory app:title="@string/functioning_application">
+            <EditTextPreference
+                app:defaultValue="https://"
+                app:icon="@drawable/ic_settings_white_24dp"
+                app:key="debug_questions"
+                app:title="@string/url_support_questions" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
