@@ -12,7 +12,7 @@
         android:layout_height="86dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/Untitled"
+        android:src="@drawable/logo_arus"
         android:tint="@color/color_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

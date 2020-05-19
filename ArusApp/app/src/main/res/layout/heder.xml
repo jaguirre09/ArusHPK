@@ -15,7 +15,7 @@
         android:layout_marginTop="28dp"
         android:text="@string/title_inquiry"
         android:textColor="@color/color_blue"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -37,5 +37,5 @@
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:background="@color/color_blue"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

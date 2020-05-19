@@ -11,7 +11,7 @@ public class service_Management extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service__management);
+        setContentView(R.layout.activity_management);
     }
     public void main_exit(View v) {
 

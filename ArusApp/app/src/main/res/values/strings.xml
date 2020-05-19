@@ -10,7 +10,7 @@
     <string name="send_request">Enviar solicitud</string>
     <string name="user_name">Nombre de usuario</string>
     <string name="phone">Telefono</string>
-    <string name="Ubication">Ubicacion</string>
+    <string name="location">Ubicacion</string>
     <string name="select_printer">Selecione la impresora de su solicitud</string>
     <string name="Email">Selecciona la impresora de su solicitud</string>
     <string name="title_inquiry">Título de la encuesta</string>
