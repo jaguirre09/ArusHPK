@@ -26,15 +26,17 @@
 
     <Button
         android:id="@+id/send"
-        android:layout_width="290dp"
+        android:layout_width="wrap_content"
         android:layout_height="85dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="@color/color_blue"
+        android:padding="10dp"
         android:text="@string/send_inquiry"
         android:textColor="@color/color_white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler" />
 </androidx.constraintlayout.widget.ConstraintLayout>

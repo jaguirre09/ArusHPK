@@ -9,6 +9,6 @@ public class activity_inquiry extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inquiry);
+        setContentView(R.layout.activity_survey);
     }
 }
