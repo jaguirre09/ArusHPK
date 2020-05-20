@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json");
-require_once "../classes/login.php";
+require_once "../classes/Login.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["CONTENT_TYPE"] === "application/x-www-form-urlencoded") {
     if (isset($_POST["pin"]) && isset($_POST["isAdmin"])) {
