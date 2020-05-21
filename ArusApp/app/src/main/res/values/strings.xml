@@ -19,4 +19,12 @@
     <string name="question_inquiry">pregunta en la encuesta</string>
     <string name="functioning_application">Funcionamuiento de la Aplicacion</string>
     <string name="url_support_questions">Funcionamuiento de la Aplicacion</string>
+    <string name="password">Password</string>
+    <string name="_2_text">2. text</string>
+    <string name="_1_text">1. text</string>
+    <string name="si">si</string>
+    <string name="no">no</string>
+    <string name="calificacion_baja">qualification_low</string>
+    <string name="calificacion_alta">qualification_high</string>
+    <string name="respuesta">answer</string>
 </resources>

@@ -5,37 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_white"
-    tools:context="com.oneago."
+    tools:context=".MainActivity"
     tools:ignore="ContentDescription">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/ingress_report"
+            android:id="@+id/button_management_services"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="50dp"
             android:background="@color/color_blue"
-            android:onClick="main_service"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/check_contacts"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintRight_toLeftOf="@+id/check_contacts">
 
             <ImageView
                 android:layout_width="152dp"
                 android:layout_height="110dp"
                 android:background="@color/color_blue"
                 android:padding="22dp"
-                android:src="@drawable/ic_services_white" />
+                android:src="@drawable/ic_logo" />
 
 
             <TextView
@@ -45,29 +42,27 @@
                 android:gravity="center"
                 android:text="@string/activity_services"
                 android:textColor="@color/color_white"
-                android:textSize="18sp"
-                tools:ignore="MissingConstraints" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/check_contacts"
+            android:id="@+id/button_survey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/color_blue"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
             android:layout_marginRight="50dp"
-            android:onClick="main_inquiry"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/ingress_report"
-            app:layout_constraintRight_toLeftOf="@+id/contact_support"
-            tools:ignore="MissingConstraints,UseCompoundDrawables">
+            app:layout_constraintRight_toLeftOf="@+id/contact_support">
 
             <ImageView
                 android:layout_width="152dp"
                 android:layout_height="110dp"
                 android:background="@color/color_blue"
                 android:padding="10dp"
-                android:src="@drawable/ic_polls_white_24dp" />
+                android:src="@drawable/ic_polls" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -80,15 +75,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/contact_support"
+            android:id="@+id/button_setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="150dp"
             android:orientation="vertical"
-            app:layout_constraintLeft_toRightOf="@+id/check_contacts"
+            android:background="@color/color_blue"
             app:layout_constraintRight_toRightOf="parent"
-            tools:ignore="MissingConstraints,UseCompoundDrawables">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/settings"
@@ -96,8 +89,8 @@
                 android:layout_height="110dp"
                 android:background="@color/color_blue"
                 android:padding="10dp"
-                android:src="@drawable/ic_settings_white_24dp"
-                android:tint="#FFFFFF"/>
+                android:src="@drawable/ic_settings"
+                android:tint="#FFFFFF" />
 
 
             <TextView
@@ -111,5 +104,5 @@
         </LinearLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

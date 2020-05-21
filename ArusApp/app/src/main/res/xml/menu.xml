@@ -5,7 +5,7 @@
         <PreferenceCategory app:title="@string/functioning_application">
             <EditTextPreference
                 app:defaultValue="https://"
-                app:icon="@drawable/ic_settings_white_24dp"
+                app:icon="@drawable/ic_settings"
                 app:key="debug_questions"
                 app:title="@string/url_support_questions" />
 

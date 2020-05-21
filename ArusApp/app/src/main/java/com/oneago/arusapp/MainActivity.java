@@ -16,13 +16,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void main_service(View v) {
 
-        Intent main_service = new Intent(this, service_Management.class);
+        Intent main_service = new Intent(this, ServiceManagement.class);
         startActivity(main_service);
 
         }
     public void main_inquiry(View v) {
 
-        Intent main_inquiry = new Intent(this, activity_inquiry.class);
+        Intent main_inquiry = new Intent(this, ActivitySurvey.class);
         startActivity(main_inquiry);
 
     }
