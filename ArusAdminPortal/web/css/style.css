@@ -152,6 +152,8 @@
 
 .main-dashboard {
     padding: 20px;
+    height: 100%;
+    width: 100%;
 }
 
 .footer {
@@ -159,6 +161,7 @@
     background: #2a2a2a;
     grid-column-start: 1;
     grid-column-end: 3;
+    grid-row-end: 4;
     display: flex;
     align-items: center;
     justify-content: center;
