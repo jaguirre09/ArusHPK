@@ -154,6 +154,25 @@
     padding: 20px;
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    background: #004284;
+    width: 120px;
+    height: 120px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card i {
+    font-size: 2rem;
 }
 
 .footer {
@@ -170,7 +189,7 @@
 .footer h2 {
     color: white;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: auto;
 }
 
