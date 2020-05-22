@@ -27,4 +27,5 @@
     <string name="calificacion_baja">qualification_low</string>
     <string name="calificacion_alta">qualification_high</string>
     <string name="respuesta">answer</string>
+    <string name="continue_button">Continuar</string>
 </resources>

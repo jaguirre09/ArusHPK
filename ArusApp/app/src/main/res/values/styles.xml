@@ -6,4 +6,11 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="blueButton">
+        <item name="android:background">@color/color_blue</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
 </resources>
