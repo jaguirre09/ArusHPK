@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="30dp"
-    tools:context=".ActivitySessions">
+    tools:context=".activities.ActivitySessions">
 
     <ImageView
         android:id="@+id/logo_session"
@@ -73,5 +73,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textField" />
+
+    <TextView
+        android:id="@+id/alertText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/button_login"
+        tools:text="Texto del servidor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

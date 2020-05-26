@@ -1,8 +1,10 @@
-package com.oneago.arusapp;
+package com.oneago.arusapp.activities;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.oneago.arusapp.R;
 
 public class ActivitySurvey extends AppCompatActivity {
 

@@ -1,11 +1,13 @@
-package com.oneago.arusapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.oneago.arusapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.oneago.arusapp.R;
 
 public class ServiceManagement extends AppCompatActivity implements View.OnClickListener {
 
