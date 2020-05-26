@@ -13,8 +13,6 @@
     <string name="location">Ubicacion</string>
     <string name="select_printer">Selecione la impresora de su solicitud</string>
     <string name="Email">Selecciona la impresora de su solicitud</string>
-    <string name="title_inquiry">Título de la encuesta</string>
-    <string name="instruction_inquiry">Describa las instruciones de la encuesta</string>
     <string name="send_inquiry">Enviar encuesta</string>
     <string name="question_inquiry">pregunta en la encuesta</string>
     <string name="functioning_application">Funcionamuiento de la Aplicacion</string>
@@ -38,4 +36,5 @@
     <string name="no_enabled_user">Usuario %s no está habilitado</string>
 
     <string name="label_name">Sesión iniciada como %s</string>
+    <string name="has_found_error">Ocurri[o un error</string>
 </resources>
