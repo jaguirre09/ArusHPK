@@ -12,7 +12,6 @@
     <string name="phone">Telefono</string>
     <string name="location">Ubicacion</string>
     <string name="select_printer">Selecione la impresora de su solicitud</string>
-    <string name="Email">Selecciona la impresora de su solicitud</string>
     <string name="send_inquiry">Enviar encuesta</string>
     <string name="question_inquiry">pregunta en la encuesta</string>
     <string name="functioning_application">Funcionamuiento de la Aplicacion</string>
@@ -36,5 +35,9 @@
     <string name="no_enabled_user">Usuario %s no está habilitado</string>
 
     <string name="label_name">Sesión iniciada como %s</string>
-    <string name="has_found_error">Ocurri[o un error</string>
+    <string name="has_found_error">Ocurrió un error</string>
+    <string name="obligatory_space">El %s es obligatorio</string>
+    <string name="agree">Aceptar</string>
+    <string name="sending_ok">Se realizó el envío correctamente</string>
+    <string name="send_ok_title">Operación realizada con éxito</string>
 </resources>

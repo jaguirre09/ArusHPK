@@ -45,10 +45,11 @@ class SendEmail
 
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
             $mail->isSMTP();                                            // Send using SMTP
+            $mail->CharSet = 'UTF-8';                                   // charset
             $mail->Host = SMTP_HOST;                                    // Set the SMTP server to send through
-            $mail->SMTPAuth = false;                                     // Enable SMTP authentication
+            $mail->SMTPAuth = true;                                     // Enable SMTP authentication
             $mail->Username = SMTP_USERNAME;                            // SMTP username
             $mail->Password = SMTP_PASSWORD;                            // SMTP password
             if (SMTP_SECURE != null) {
