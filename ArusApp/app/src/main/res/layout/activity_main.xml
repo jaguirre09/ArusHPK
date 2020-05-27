@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_white"
-    tools:context=".MainActivity"
+    tools:context=".activities.MainActivity"
     tools:ignore="ContentDescription">
+
+    <TextView
+        android:id="@+id/userText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Nombre completo del usuario" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -21,7 +29,7 @@
             android:id="@+id/button_management_services"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/color_blue"
+            android:background="@color/colorPrimary"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -30,7 +38,6 @@
             <ImageView
                 android:layout_width="152dp"
                 android:layout_height="110dp"
-                android:background="@color/color_blue"
                 android:padding="22dp"
                 android:src="@drawable/ic_logo" />
 
@@ -38,10 +45,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:background="@color/color_blue"
+                android:background="@color/colorPrimary"
                 android:gravity="center"
                 android:text="@string/activity_services"
-                android:textColor="@color/color_white"
+                android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -49,9 +56,9 @@
             android:id="@+id/button_survey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/color_blue"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
+            android:background="@color/colorPrimary"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/ingress_report"
@@ -60,17 +67,18 @@
             <ImageView
                 android:layout_width="152dp"
                 android:layout_height="110dp"
-                android:background="@color/color_blue"
+                android:background="@color/colorPrimary"
                 android:padding="10dp"
-                android:src="@drawable/ic_polls" />
+                android:src="@drawable/ic_survey"
+                android:tint="@android:color/white" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:background="@color/color_blue"
+                android:background="@color/colorPrimary"
                 android:gravity="center"
                 android:text="@string/activity_polls"
-                android:textColor="@color/color_white"
+                android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -78,8 +86,8 @@
             android:id="@+id/button_setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:orientation="vertical"
-            android:background="@color/color_blue"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -87,19 +95,19 @@
                 android:id="@+id/settings"
                 android:layout_width="152dp"
                 android:layout_height="110dp"
-                android:background="@color/color_blue"
+                android:background="@color/colorPrimary"
                 android:padding="10dp"
                 android:src="@drawable/ic_settings"
-                android:tint="#FFFFFF" />
+                android:tint="@android:color/white" />
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:background="@color/color_blue"
+                android:background="@color/colorPrimary"
                 android:gravity="center"
                 android:text="@string/activity_config"
-                android:textColor="@color/color_white"
+                android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </LinearLayout>
 

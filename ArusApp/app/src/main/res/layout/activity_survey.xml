@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".activities.ActivitySurvey"
     tools:ignore="ContentDescription">
 
     <LinearLayout
@@ -14,57 +15,55 @@
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
+        <View
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:background="@color/color_blue" />
+            android:background="@color/colorPrimary" />
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:layout_marginTop="28dp"
-            android:text="@string/title_inquiry"
-            android:textColor="@color/color_blue"
+            android:textColor="@color/colorPrimary"
             android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            tools:text="Título de la encuesta" />
 
         <TextView
+            android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:layout_marginTop="16dp"
-            android:text="@string/instruction_inquiry"
-            android:textColor="@color/color_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            android:textColor="@color/colorPrimary"
+            tools:text="Descripción de la encuesta" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintWidth_max="824dp"
-        tools:itemCount="6" />
+        tools:itemCount="10" />
 
     <Button
+        android:id="@+id/send"
+        style="@style/blueButton"
+        android:layout_width="300dp"
         android:layout_height="85dp"
         android:layout_marginTop="40dp"
-        android:background="@color/color_blue"
+        android:layout_marginBottom="20dp"
         android:padding="10dp"
         android:text="@string/send_inquiry"
-        android:textColor="@color/color_white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_width="300dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

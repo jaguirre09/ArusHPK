@@ -5,7 +5,7 @@ require_once "../classes/Login.php";
 if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["CONTENT_TYPE"] === "application/x-www-form-urlencoded") {
     if (isset($_POST["pin"]) && isset($_POST["isAdmin"])) {
         $isAdmin = $_POST["isAdmin"] == "true";
-        $login = new login($_POST["pin"], $isAdmin);
+        $login = new login((int) $_POST["pin"], $isAdmin);
         $userObject = $login->getUser();
     } else {
         $userObject = new user(0, "", false, 0, true, "No se pasaron correctamente las variables pin y/o isAdmin");
