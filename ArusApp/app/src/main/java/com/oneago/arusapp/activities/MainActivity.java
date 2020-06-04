@@ -1,16 +1,22 @@
-package com.oneago.arusapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.oneago.arusapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.oneago.arusapp.R;
+import com.oneago.arusapp.activities.settings.SettingsActivity;
+
+import static com.oneago.arusapp.activities.ActivitySessions.user;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private LinearLayout managementServices, surveys, setting;
+    private TextView userText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
@@ -20,10 +26,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         managementServices = findViewById(R.id.button_management_services);
         surveys = findViewById(R.id.button_survey);
         setting = findViewById(R.id.button_setting);
+        userText = findViewById(R.id.userText);
 
         managementServices.setOnClickListener(this);
         surveys.setOnClickListener(this);
         setting.setOnClickListener(this);
+
+        userText.setText(String.format(getString(R.string.label_name), user.getName()));
     }
 
     @Override
@@ -40,7 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.button_setting:
-                Toast.makeText(this, "Función en fase de desarrollo", Toast.LENGTH_LONG).show();
+                Intent main_settings = new Intent(this, SettingsActivity.class);
+                startActivity(main_settings);
                 break;
         }
     }

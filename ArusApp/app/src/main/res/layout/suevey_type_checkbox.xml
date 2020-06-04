@@ -26,7 +26,7 @@
             android:layout_marginStart="68dp"
             android:layout_marginTop="16dp"
             android:text="@string/question_inquiry"
-            android:textColor="@color/color_black"
+            android:textColor="@android:color/black"
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="12dp"
                 android:text="@string/_1_text"
-                android:textColor="@color/color_black"
+                android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <TextView
@@ -61,7 +61,7 @@
                 android:layout_weight="1"
                 android:background="@color/color_gray"
                 android:src="@drawable/ic_close"
-                android:tint="@color/color_blue" />
+                android:tint="@color/colorPrimary" />
 
         </LinearLayout>
 
@@ -78,7 +78,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="12dp"
                 android:text="@string/_2_text"
-                android:textColor="@color/color_black"
+                android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
             <TextView
@@ -94,7 +94,7 @@
                 android:layout_weight="1"
                 android:background="@color/color_gray"
                 android:src="@drawable/ic_close"
-                android:tint="@color/color_blue" />
+                android:tint="@color/colorPrimary" />
 
         </LinearLayout>
     </LinearLayout>

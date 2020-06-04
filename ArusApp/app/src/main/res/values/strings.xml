@@ -12,14 +12,11 @@
     <string name="phone">Telefono</string>
     <string name="location">Ubicacion</string>
     <string name="select_printer">Selecione la impresora de su solicitud</string>
-    <string name="Email">Selecciona la impresora de su solicitud</string>
-    <string name="title_inquiry">Título de la encuesta</string>
-    <string name="instruction_inquiry">Describa las instruciones de la encuesta</string>
     <string name="send_inquiry">Enviar encuesta</string>
     <string name="question_inquiry">pregunta en la encuesta</string>
     <string name="functioning_application">Funcionamuiento de la Aplicacion</string>
-    <string name="url_support_questions">Funcionamuiento de la Aplicacion</string>
-    <string name="password">Password</string>
+    <string name="server_url">Enlace del servidor</string>
+    <string name="password">Pin</string>
     <string name="_2_text">2. text</string>
     <string name="_1_text">1. text</string>
     <string name="si">si</string>
@@ -28,4 +25,19 @@
     <string name="calificacion_alta">qualification_high</string>
     <string name="respuesta">answer</string>
     <string name="continue_button">Continuar</string>
+
+    <string name="help">Ayuda</string>
+    <string name="send_feedback">Enviar sugerencias</string>
+    <string name="feedback_desc">Reportar errores técnicos y sugerir nuevas funciones</string>
+
+    <string name="app_settings">Configuraciones de la app</string>
+    <string name="found_error">Se produjo un error: %s</string>
+    <string name="no_enabled_user">Usuario %s no está habilitado</string>
+
+    <string name="label_name">Sesión iniciada como %s</string>
+    <string name="has_found_error">Ocurrió un error</string>
+    <string name="obligatory_space">El %s es obligatorio</string>
+    <string name="agree">Aceptar</string>
+    <string name="sending_ok">Se realizó el envío correctamente</string>
+    <string name="send_ok_title">Operación realizada con éxito</string>
 </resources>
