@@ -162,7 +162,7 @@ public class ServiceManagement extends AppCompatActivity implements View.OnClick
                     object.put("printer", printer.getText().toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    showAlert(getString(R.string.has_found_error), e.getMessage(), false);
+                    showAlert(getResources().getString(R.string.has_found_error), e.getMessage(), false);
                     break;
                 }
 
@@ -173,21 +173,22 @@ public class ServiceManagement extends AppCompatActivity implements View.OnClick
                         Log.i("VolleyResponse", response.toString());
                         try {
                             if (!response.getBoolean("sent")) {
-                                showAlert(getString(R.string.has_found_error), response.getString("errdesc"), false);
+                                showAlert(getResources().getString(R.string.has_found_error), response.getString("errdesc"), false);
                             } else {
-                                showAlert(getString(R.string.send_ok_title), getString(R.string.sending_ok), true);
+                                showAlert(getResources().getString(R.string.send_ok_title), getResources().getString(R.string.sending_ok), true);
 
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            showAlert(getString(R.string.has_found_error), String.format(getString(R.string.found_error), e.getMessage()), false);
+                            showAlert(getResources().getString(R.string.has_found_error), String.format(getResources().getString(R.string.found_error), e.getMessage()), false);
                         }
                     }
                 }, new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        showAlert(getString(R.string.has_found_error), String.format(getString(R.string.found_error), error.toString() + " - StatusCode: " + error.networkResponse.statusCode), false);
+                        showAlert(getResources().getString(R.string.has_found_error), String.format(getResources().getString(R.string.found_error), error.toString() + " - StatusCode: " + error.networkResponse.statusCode), false);
+
                     }
                 }) {
                     @Override
