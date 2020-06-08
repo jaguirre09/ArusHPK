@@ -16,16 +16,15 @@ class CreateUser
      */
     public function __construct(string $name, int $pin, bool $isAdmin)
     {
-        $this->name = $name;
-        $this->pin = $pin;
+        $this->name = $this->escapeString($name);
+        $this->pin = $this->escapeString($pin);
         $this->isAdmin = $isAdmin;
-        $this->create();
     }
 
     /**
-     * @return bool|string @return bool true if user created else return false if is unknown error but if error is recognized return string with details
+     * @return bool|string @return bool true if user created but if there is error return string with details
      */
-    private function create()
+    public function create(): bool
     {
         $con = null;
         include_once "connection.php"; // include $con
@@ -44,7 +43,12 @@ class CreateUser
 
             return true;
         } else {
-            return false;
+            return "Error desconocido";
         }
+    }
+
+    private function escapeString(string $string): string
+    {
+        return preg_replace('#<script(.*?)>(.*?)</script>#is', '', $string);
     }
 }

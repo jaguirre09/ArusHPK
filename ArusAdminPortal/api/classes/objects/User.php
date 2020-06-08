@@ -4,9 +4,9 @@
 class User
 {
     private int $id;
-    protected string $name;
+    private string $name;
     private bool $enabled;
-    protected int $userType;
+    private int $userType;
     private bool $error;
     private string $errDesc;
 
