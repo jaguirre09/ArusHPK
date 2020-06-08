@@ -7,7 +7,7 @@
             <h2><a href="">Salir</a></h2>
         </div>
     </header>
-    <?php require "includes/aside.php"?>
+    <?php require "includes/aside.php" ?>
     <div class="add-survey">
         <div class="add">
             <hr>
@@ -81,5 +81,5 @@
         </div>
         <input type="button" class="button" value="Guardar" style="width: 30%;height: 40px">
     </div>
-    <?php include_once "includes/footer.php"?>
+    <?php include_once "includes/footer.php" ?>
 </main>

@@ -28,6 +28,6 @@
         <div class="card-survey">
         </div>
     </section>
-    <?php include_once"includes/aside.php"
+    <?php include_once "includes/aside.php"
     ?>
 </main>

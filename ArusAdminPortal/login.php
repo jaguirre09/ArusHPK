@@ -13,7 +13,7 @@
 </head>
 <body>
 <main class="login">
-    <img class="bg-login" src="./assets/bg-login.jpg" alt="">
+    <img class="bg-login" src="assets/bg-login.jpg" alt="">
     <div class="login-section">
         <div class="container">
             <div class="row">
