@@ -3,8 +3,10 @@ RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
-RewriteRule ^dashboard$ dashboard.php [QSA]
-RewriteRule ^users$ dashboard.php [QSA]
 RewriteRule ^logout$ logout.php [QSA]
+RewriteRule ^dashboard$ dashboard.php [QSA]
+RewriteRule ^gestionar-encuestas$ selectSurveys.php [QSA]
+RewriteRule ^gestionar-usuarios$ users.php [QSA]
+RewriteRule ^configuraciones$ settings.php [QSA]
 
 #Options -Indexes

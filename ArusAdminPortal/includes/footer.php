@@ -1,3 +1,6 @@
 <footer class="footer">
-    <h2>© 2020</h2>
+    <h2>© <? echo date("Y"); ?></h2>
 </footer>
+</main>
+</body>
+</html>

@@ -1,17 +1,14 @@
-<main class="dashboard">
-    <header class="header-dashboard">
-        <div class="header-item">
-            <h2>Settings</h2>
-        </div>
-        <div class="header-item">
-            <h2><a href="">Salir</a></h2>
-        </div>
-    </header>
-    <?php include_once "includes/aside.php" ?>
-    <div class="management-settings">
-        <div class="email-admin">Cambiar correo administracion</div>
-        <div class="email_space"><input type="email" name="e-email" style="color: #E5E5E5"></div>
-        <div class="button-space"><input type="button" value="Guardar" class="button"></div>
+<?php
+require_once "includes/header.php";
+require_once "api/classes/constants.php";
+head("Configuraciones");
+?>
+<div class="management-settings">
+    <div class="form-group">
+        <label for="support">Correo de soporte (Emisor)</label>
+        <input class="form-control" id="support" type="email" name="e-email" value="<? echo SMTP_USERNAME; ?>" disabled>
+        <small id="emailHelp" class="form-text text-muted">Para cambiar el correo de soporte debe actualzarse el archivo
+            constants.php ubicado en <? echo $_SERVER["DOCUMENT_ROOT"]; ?>/api/classes</small>
     </div>
-    <?php include_once "includes/footer.php" ?>
-</main>
+</div>
+<?php require_once "includes/footer.php" ?>

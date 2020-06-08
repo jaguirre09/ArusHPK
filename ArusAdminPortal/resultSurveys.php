@@ -1,14 +1,7 @@
-<main class="dashboard">
-    <header class="header-dashboard">
-        <div class="header-item">
-            <h2>Añadir encuesta</h2>
-        </div>
-        <div class="header-item">
-            <h2><a href="">Salir</a></h2>
-        </div>
-    </header>
-    <?php include_once "includes/aside.php"
-    ?>
+<?php
+require_once "includes/header.php";
+head("Resultados de encuestas");
+?>
     <section class="select-survey">
         <a href="selectSurveys.php">
             <div class="buttons"><b>Seleccionar encuesta</b><br><br><input type="button" class="buttons-2"
@@ -28,6 +21,4 @@
         <div class="card-survey">
         </div>
     </section>
-    <?php include_once "includes/aside.php"
-    ?>
-</main>
+<?php require_once "includes/header.php"; ?>
