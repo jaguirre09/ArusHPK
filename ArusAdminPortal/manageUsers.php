@@ -22,7 +22,9 @@ $users = new ListUsers();
                 <th scope="row"><? echo $x->getId(); ?></th>
                 <td><? echo $x->getName(); ?></td>
                 <td><? echo $x->getPin(); ?></td>
-                <td><? echo $x->isEnabled() ? "Habilitado" : "Deshabilitado"; ?></td>
+                <td onclick="switchState(<? echo $x->getId(); ?>, <? echo $x->isEnabled() ? 1 : 0; ?>)"
+                    style="cursor: pointer; color: <? echo $x->isEnabled() ? "green" : "red"; ?>">
+                    <b><? echo $x->isEnabled() ? "Habilitado" : "Deshabilitado"; ?></b></td>
                 <td><? echo $x->getUserType() == User::ADMIN ? "Administrador" : ($x->getUserType() == User::USER ? "Usuario" : "ErrorBD"); ?></td>
                 <td><a href="#"><i class="fas fa-pen"></i></a></td>
             </tr>
@@ -32,3 +34,24 @@ $users = new ListUsers();
     <button onclick="window.location = '/agregar-usuario';">Agregar Usuario</button>
 </div>
 <?php require_once "includes/footer.php" ?>
+<script>
+    function switchState(id, actualState) {
+        let url = window.location.origin + "/api/rest/switch_enable_state.php"
+        let data = "id=" + id + "&state=" + actualState
+        $.ajax({
+            type: 'POST',
+            url: url,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+            data: data,
+            success: function (response) {
+                console.log(response);
+                window.location.reload()
+            },
+            error: function (request, status, error) {
+                alert(request.responseText + "\nStatus: " + status + "\nError: " + error);
+                window.location.reload()
+            }
+        })
+    }
+</script>
