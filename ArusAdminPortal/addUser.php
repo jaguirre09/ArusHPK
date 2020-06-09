@@ -10,8 +10,10 @@ if (isset($_POST["name"]) && isset($_POST["pin"])) {
     } else {
         $creator = new CreateUser($_POST["name"], $_POST["pin"], $_POST["role"] == User::ADMIN ? true : ($_POST["role"] == false ? User::USER : ""));
         $message = $creator->create();
-        if ($message) {
+        if ($message === true) {
             $message = ($_POST["role"] == User::ADMIN ? "Administrador" : "Usuario") . " " . $_POST["name"] . " creado correctamente";
+        } else if (strpos($message, "Duplicate entry") == 0) {
+            $message = "El pin " . $_POST["pin"] . " ya es " . ($_POST["role"] == User::ADMIN ? "Administrador" : "Usuario");
         }
     }
 }

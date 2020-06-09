@@ -24,7 +24,7 @@ class CreateUser
     /**
      * @return bool|string @return bool true if user created but if there is error return string with details
      */
-    public function create(): bool
+    public function create()
     {
         $con = null;
         include_once "connection.php"; // include $con
