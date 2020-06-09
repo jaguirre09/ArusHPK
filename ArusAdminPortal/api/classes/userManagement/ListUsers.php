@@ -1,5 +1,5 @@
 <?php
-require_once "objects/UserWithPin.php";
+require_once __DIR__ . "/../objects/UserWithPin.php";
 
 class ListUsers
 {
@@ -10,7 +10,7 @@ class ListUsers
     {
         $con = null;
         $users = [];
-        include_once "connection.php"; // include $con
+        require_once __DIR__ . "/../connection.php"; // include $con
 
         $query = "SELECT ID, FULL_NAME, PIN, ENABLED_LOGIN, USER_TYPE FROM USERS ORDER BY USER_TYPE";
         $prepare = mysqli_stmt_init($con);

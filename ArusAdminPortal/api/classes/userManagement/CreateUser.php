@@ -1,5 +1,5 @@
 <?php
-require_once "objects/User.php";
+require_once __DIR__ . "/../objects/User.php";
 
 
 class CreateUser
@@ -27,7 +27,7 @@ class CreateUser
     public function create()
     {
         $con = null;
-        include_once "connection.php"; // include $con
+        require_once __DIR__ . "/../connection.php"; // include $con
         $query = "INSERT INTO USERS (FULL_NAME, PIN, USER_TYPE) VALUES (?, ?, ?);";
         $userType = $this->isAdmin ? user::ADMIN : user::USER;
         $prepare = mysqli_stmt_init($con);

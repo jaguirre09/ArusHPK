@@ -1,6 +1,6 @@
 <?php
 require_once "includes/header.php";
-require_once "api/classes/CreateUser.php";
+require_once "api/classes/userManagement/CreateUser.php";
 head("Crear usuario");
 if (isset($_POST["name"]) && isset($_POST["pin"])) {
     if (!isset($_POST["role"])) {
@@ -24,7 +24,7 @@ if (isset($_POST["name"]) && isset($_POST["pin"])) {
     <? endif; ?>
     <div class="form-group col-md-5">
         <label for="inputName">Nombre</label>
-        <input name="name" type="text" class="form-control" id="inputName" required>
+        <input name="name" type="text" class="form-control" id="inputName" required autocomplete="off">
     </div>
     <div class="form-group col-md-5">
         <label for="inputPin">Pin</label>
