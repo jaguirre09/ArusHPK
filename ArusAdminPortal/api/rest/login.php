@@ -2,7 +2,7 @@
 header("Content-Type: application/json");
 require_once "../classes/Login.php";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["CONTENT_TYPE"] === "application/x-www-form-urlencoded") {
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_SERVER["CONTENT_TYPE"]) && $_SERVER["CONTENT_TYPE"] === "application/x-www-form-urlencoded") {
     if (isset($_POST["pin"]) && isset($_POST["isAdmin"])) {
         $isAdmin = $_POST["isAdmin"] == "true";
         $login = new login((int) $_POST["pin"], $isAdmin);
