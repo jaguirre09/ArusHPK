@@ -74,6 +74,12 @@ function head(string $title)
                         <h3>Configuraciones</h3>
                     </a>
                 </li>
+                <li>
+                    <a href="/impresoras">
+                        <i class="fas fa-print"></i>
+                        <h3>Gestión impresoras</h3>
+                    </a>
+                </li>
             </ul>
         </nav>
     </aside>

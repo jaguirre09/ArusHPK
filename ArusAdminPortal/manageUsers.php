@@ -36,7 +36,7 @@ $users = new ListUsers();
         <? endforeach; ?>
         </tbody>
     </table>
-    <button onclick="window.location = '/agregar-usuario';">Agregar Usuario</button>
+    <button class="btn-blue" onclick="window.location = '/agregar-usuario';">Agregar Usuario</button>
 </div>
 <?php require_once "includes/footer.php" ?>
 <!-- The Modal -->
@@ -56,7 +56,7 @@ $users = new ListUsers();
             <label for="updatePin">Pin</label>
             <input type="number" class="form-control" id="updatePin" autocomplete="off">
         </div>
-        <button id="updateButton">Actualizar</button>
+        <button class="btn-blue center" id="updateButton">Actualizar</button>
     </div>
 </div>
 <script>

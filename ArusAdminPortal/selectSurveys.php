@@ -17,12 +17,18 @@ $surveys = $obj->getSurveys();
             <input type="button" class="buttons-1" name="select-button-2">
         </div>
     </a>
+
+    <div class="card-empty-surveys">
+        <h1 class="cards-text">
+            No mostrar encuesta
+        </h1>
+    </div>
     <? foreach ($surveys as $survey) : ?>
         <div class="card-survey">
             <h3><? echo $survey["title"]; ?></h3>
-            <p>publicada el:<br><? echo $survey["creationDate"]; ?></p>
-            ID: <? echo $survey["id"]; ?>
-            <button>Seleccionar</button>
+            <p>Publicada el:<br><? echo $survey["creationDate"]; ?></p>
+            <span>ID: <? echo $survey["id"]; ?></span>
+            <button class="btn-blue">Seleccionar</button>
         </div>
     <? endforeach; ?>
 </section>

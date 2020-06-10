@@ -10,5 +10,6 @@ RewriteRule ^resultados-encuestas$ resultSurveys.php [QSA]
 RewriteRule ^gestionar-usuarios$ manageUsers.php [QSA]
 RewriteRule ^agregar-usuario$ addUser.php [QSA]
 RewriteRule ^configuraciones$ settings.php [QSA]
+RewriteRule ^impresoras$ managePrinters.php [QSA]
 
 #Options -Indexes

@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.btn-blue {
+    height: 45px;
+    width: 175px;
+    background: #004284;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
 
 .login {
     width: 100%;
@@ -119,6 +127,7 @@ input{
 
 .menu a {
     color: white;
+    width: 100%;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -129,8 +138,8 @@ input{
 .menu h3 {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin: 0;
+    width: 100%;
 }
 
 .menu i {
@@ -188,14 +197,35 @@ input{
 }
 
 .card-survey{
-    background: #c4c4c4;
-    margin: 20px;
+    background: #b0b0b0;
+    margin: 20px 10px;
+    padding: 1.5rem;
     color: white;
-    text-align: center;
+    text-align: left;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    border-radius: 12px;
+    border-radius: 10px;
+}
+
+.card-survey span {
+    margin-bottom: 10px;
+}
+
+.card-empty-surveys {
+    background: #b0b0b0;
+    margin: 20px 10px;
+    padding: 1.5rem;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.cards-text {
+    font-size: 1.5rem;
 }
 
 .card i {
@@ -221,7 +251,6 @@ input{
 }
 
 .management-user{
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     grid-template-rows: 32px;
@@ -237,11 +266,11 @@ input{
 }
 .select-survey{
     display: grid;
-    margin: 40px;
+    padding: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr 1fr;
-
 }
+
 .buttons-1{
     background: #c4c4c4;
     height: 20px;
@@ -249,6 +278,7 @@ input{
     margin-right: 20%;
     -webkit-border-bottom-right-radius:50px;
     -webkit-border-top-right-radius:50px;
+    border: none;
 
 }
 .buttons-2{
@@ -258,6 +288,7 @@ input{
     width: 80%;
     -webkit-border-bottom-left-radius:50px;
     -webkit-border-top-left-radius:50px;
+    border: none;
 
 }
 .buttons {
@@ -267,8 +298,6 @@ input{
     margin-top: 12px;
     font-size: 20px;
 }
-
-
 
 
 .email-admin{
@@ -311,7 +340,6 @@ grid-column: -3;
 }
 
 
-
 .add{
     background: #F0F0F0;
 }
@@ -320,8 +348,6 @@ hr{
     height: 12px;
     margin: 0;
 }
-
-
 
 .space{
     margin: 10px 10% 10px 10% ;
@@ -395,4 +421,16 @@ hr{
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.printers {
+    padding: 30px;
+}
+
+.printers .form-group {
+    padding: 0;
+}
+
+.printers-add {
+    margin-bottom: 1rem;
 }
