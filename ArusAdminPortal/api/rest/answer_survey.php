@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json");
-require_once "../classes/AnswerSurvey.php";
+require_once "../classes/surveyManagement/AnswerSurvey.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_SERVER["CONTENT_TYPE"]) && $_SERVER["CONTENT_TYPE"] === "application/json") {
     $request = json_decode(file_get_contents('php://input'), true);

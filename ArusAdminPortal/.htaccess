@@ -5,7 +5,8 @@ RewriteCond %{SCRIPT_FILENAME} !-f
 
 RewriteRule ^logout$ logout.php [QSA]
 RewriteRule ^dashboard$ dashboard.php [QSA]
-RewriteRule ^gestionar-encuestas$ selectSurveys.php [QSA]
+RewriteRule ^seleccionar-encuestas$ selectSurveys.php [QSA]
+RewriteRule ^resultados-encuestas$ resultSurveys.php [QSA]
 RewriteRule ^gestionar-usuarios$ manageUsers.php [QSA]
 RewriteRule ^agregar-usuario$ addUser.php [QSA]
 RewriteRule ^configuraciones$ settings.php [QSA]

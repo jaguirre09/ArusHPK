@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json");
-require_once "../classes/GetSurvey.php";
+require_once "../classes/surveyManagement/GetSurvey.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $questions = new GetSurvey(1);

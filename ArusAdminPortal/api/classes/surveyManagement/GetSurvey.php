@@ -23,17 +23,17 @@ class GetSurvey
     public function getSurveyId(): array
     {
         $con = null;
-        require_once "connection.php"; // include $con
-        $query = "SELECT * FROM SURVEYS WHERE ID = ?";
+        require_once __DIR__ . "/../connection.php"; // include $con
+        $query = "SELECT TITLE, DESCRIPTION, QUESTIONS FROM SURVEYS WHERE ID = ?";
         $prepare = mysqli_stmt_init($con);
         if (mysqli_stmt_prepare($prepare, $query)) {
             mysqli_stmt_bind_param($prepare, "i", $this->surveyId);
             mysqli_stmt_execute($prepare);
-            mysqli_stmt_bind_result($prepare, $id, $json);
+            mysqli_stmt_bind_result($prepare, $title, $desc, $json);
             mysqli_stmt_fetch($prepare);
             mysqli_stmt_close($prepare);
 
-            return json_decode($json, true);
+            return ["title" => $title, "desc" => $desc, "questions" => json_decode($json, true)];
         } else {
             return ["title" => "Error en el servidor", "desc" => "Ocurrió un error el procesar la solicitud", "questions" => []];
         }
