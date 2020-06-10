@@ -26,7 +26,7 @@ class AnswerSurvey
     public function send()
     {
         $con = null;
-        include_once "connection.php"; // include $con
+        include_once __DIR__ . "/../connection.php"; // include $con
         $query = "INSERT INTO ANSWERS (ID_SURVEY, ID_USER, ANSWER) VALUES (?, ?, ?);";
         $prepare = mysqli_stmt_init($con);
         if (mysqli_stmt_prepare($prepare, $query)) {

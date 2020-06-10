@@ -6,7 +6,7 @@ class AddSurvey
     public function __construct(string $json)
     {
         $con = null;
-        include_once "connection.php"; // include $con
+        include_once __DIR__ . "/../connection.php"; // include $con
         $query = "INSERT INTO SURVEYS (QUESTIONS) VALUES (?);";
         $prepare = mysqli_stmt_init($con);
         if (mysqli_stmt_prepare($prepare, $query)) {
