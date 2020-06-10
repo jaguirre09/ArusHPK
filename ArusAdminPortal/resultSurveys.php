@@ -22,4 +22,4 @@ head("Resultados de encuestas");
         <div class="card-survey">
         </div>
     </section>
-<?php require_once "includes/header.php"; ?>
+<?php require_once "includes/footer.php"; ?>
