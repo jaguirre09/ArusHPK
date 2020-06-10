@@ -11,9 +11,9 @@ $surveys = $obj->getSurveys();
         <i class="fas fa-plus"></i>
     </div>
     <? foreach ($surveys as $survey) : ?>
-        <div class="card">
+        <div class="card-description">
             <p><b><? echo $survey["title"]; ?></b></p>
-            <p>publicada el:<br><? echo $survey["creationDate"]; ?></p>
+            <p>Publicada el:<br><? echo $survey["creationDate"]; ?></p>
             ID: <? echo $survey["id"]; ?>
         </div>
     <? endforeach; ?>
