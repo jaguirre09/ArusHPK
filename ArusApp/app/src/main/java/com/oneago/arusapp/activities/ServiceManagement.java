@@ -20,14 +20,18 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.oneago.arusapp.Constants;
 import com.oneago.arusapp.R;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static com.oneago.arusapp.activities.ActivitySessions.user;
@@ -62,17 +66,57 @@ public class ServiceManagement extends AppCompatActivity implements View.OnClick
         close.setOnClickListener(this);
 
         printer = findViewById(R.id.text_print);
-        String[] fruits = {"Impresora1", "Imp2", "Imp3", "Imp4"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner, fruits);
-        printer.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        getPrinters();
+    }
+
+    private void getPrinters() {
+        final List<String> data = new ArrayList<>();
+        // Instantiate the RequestQueue.
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url = preferences.getString("server_url", "http://example.com") + Constants.getPrintersPath;
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.i("VolleyResponse", response);
+                        try {
+                            JSONArray jsonArray = new JSONArray(response);
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject object = jsonArray.getJSONObject(i);
+                                if (object.getBoolean("error")) {
+                                    data.add(object.getString("err_desc"));
+                                    break;
+                                }
+                                data.add(object.getString("name"));
+                                Log.d("Printer", object.getString("name"));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            data.add(e.getMessage());
+                        }
+                        ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner, data);
+                        printer.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                            @Override
+                            public void onFocusChange(View view, boolean hasFocus) {
+                                if (hasFocus) {
+                                    printer.showDropDown();
+                                }
+                            }
+                        });
+                        printer.setAdapter(adapter);
+                    }
+                }, new Response.ErrorListener() {
+
             @Override
-            public void onFocusChange(View view, boolean hasFocus) {
-                if (hasFocus) {
-                    printer.showDropDown();
-                }
+            public void onErrorResponse(VolleyError error) {
+                data.add(error.toString() + " - StatusCode: " + error.networkResponse.statusCode);
             }
         });
-        printer.setAdapter(adapter);
+
+        // Add the request to the RequestQueue.
+        queue.add(stringRequest);
     }
 
     @Override
@@ -118,7 +162,7 @@ public class ServiceManagement extends AppCompatActivity implements View.OnClick
                     object.put("printer", printer.getText().toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    showAlert(getString(R.string.has_found_error), e.getMessage(), false);
+                    showAlert(getResources().getString(R.string.has_found_error), e.getMessage(), false);
                     break;
                 }
 
@@ -129,21 +173,22 @@ public class ServiceManagement extends AppCompatActivity implements View.OnClick
                         Log.i("VolleyResponse", response.toString());
                         try {
                             if (!response.getBoolean("sent")) {
-                                showAlert(getString(R.string.has_found_error), response.getString("errdesc"), false);
+                                showAlert(getResources().getString(R.string.has_found_error), response.getString("errdesc"), false);
                             } else {
-                                showAlert(getString(R.string.send_ok_title), getString(R.string.sending_ok), true);
+                                showAlert(getResources().getString(R.string.send_ok_title), getResources().getString(R.string.sending_ok), true);
 
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            showAlert(getString(R.string.has_found_error), String.format(getString(R.string.found_error), e.getMessage()), false);
+                            showAlert(getResources().getString(R.string.has_found_error), String.format(getResources().getString(R.string.found_error), e.getMessage()), false);
                         }
                     }
                 }, new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        showAlert(getString(R.string.has_found_error), String.format(getString(R.string.found_error), error.toString() + " - StatusCode: " + error.networkResponse.statusCode), false);
+                        showAlert(getResources().getString(R.string.has_found_error), String.format(getResources().getString(R.string.found_error), error.toString() + " - StatusCode: " + error.networkResponse.statusCode), false);
+
                     }
                 }) {
                     @Override

@@ -1,5 +1,5 @@
 <?php
-require_once "objects/User.php";
+require_once __DIR__ . "/../objects/User.php";
 
 
 class CreateUser
@@ -16,19 +16,18 @@ class CreateUser
      */
     public function __construct(string $name, int $pin, bool $isAdmin)
     {
-        $this->name = $name;
-        $this->pin = $pin;
+        $this->name = $this->escapeString($name);
+        $this->pin = $this->escapeString($pin);
         $this->isAdmin = $isAdmin;
-        $this->create();
     }
 
     /**
-     * @return bool|string @return bool true if user created else return false if is unknown error but if error is recognized return string with details
+     * @return bool|string @return bool true if user created but if there is error return string with details
      */
-    private function create()
+    public function create()
     {
         $con = null;
-        include_once "connection.php"; // include $con
+        require_once __DIR__ . "/../connection.php"; // include $con
         $query = "INSERT INTO USERS (FULL_NAME, PIN, USER_TYPE) VALUES (?, ?, ?);";
         $userType = $this->isAdmin ? user::ADMIN : user::USER;
         $prepare = mysqli_stmt_init($con);
@@ -44,7 +43,12 @@ class CreateUser
 
             return true;
         } else {
-            return false;
+            return "Error desconocido";
         }
+    }
+
+    private function escapeString(string $string): string
+    {
+        return preg_replace('#<script(.*?)>(.*?)</script>#is', '', $string);
     }
 }
