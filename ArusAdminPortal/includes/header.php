@@ -57,7 +57,7 @@ function head(string $title)
                     </a>
                 </li>
                 <li>
-                    <a href="/gestionar-encuestas">
+                    <a href="/seleccionar-encuestas">
                         <i class="fas fa-folder-open"></i>
                         <h3>Gestionar encuestas</h3>
                     </a>
