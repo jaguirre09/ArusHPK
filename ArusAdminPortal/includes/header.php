@@ -30,6 +30,7 @@ function head(string $title)
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" type="image/png" href="../assets/icon.png" />
         <title><? echo $title; ?></title>
     </head>
 <body>
