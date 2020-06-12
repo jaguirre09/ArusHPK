@@ -30,6 +30,8 @@ if (isset($_POST["pin"])) {
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icon.png"/>
+    <meta name="robots" content="noindex, nofollow, nosnippet, noimageindex">
     <title>Iniciar sesión</title>
 </head>
 <body>
