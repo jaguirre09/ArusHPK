@@ -54,6 +54,14 @@ class SendEmail
             $mail->Password = SMTP_PASSWORD;                            // SMTP password
             if (SMTP_SECURE != null) {
                 $mail->SMTPSecure = SMTP_SECURE;                        // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+            }else{
+            $mail->SMTPOptions = array(
+                    'ssl' => array(
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                        'allow_self_signed' => true
+                    )
+                );
             }
             $mail->Port = SMTP_PORT;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
